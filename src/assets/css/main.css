@@ -1,7 +1,7 @@
 html, body{
   min-height: 100vh;
   background-color: #292C35!important;
-  color: white!important;
+  color: #b9b9b9 !important;
 }
 
 .flex-between{
@@ -10,6 +10,9 @@ html, body{
   align-items: center;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
 
 .dot-glow{
   display: inline-block;
