@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {Router, RouterOutlet} from '@angular/router';
-import {NavComponent} from "./nav/nav.component";
+import {NavComponent} from "./presentation/nav/nav.component";
 import { CommonModule } from '@angular/common';
 
 @Component({

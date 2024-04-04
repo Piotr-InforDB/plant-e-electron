@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import {PlongComponent} from "./apps/plong/plong.component";
-import {TextComponent} from "./apps/text/text.component";
-import {HomeComponent} from "./home/home.component";
+import {PlongComponent} from "./presentation/apps/plong/plong.component";
+import {TextComponent} from "./presentation/apps/text/text.component";
+import {HomeComponent} from "./presentation/home/home.component";
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },

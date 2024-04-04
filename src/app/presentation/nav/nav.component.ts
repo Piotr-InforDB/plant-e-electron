@@ -2,6 +2,9 @@ import {Component, OnInit, NgZone} from '@angular/core';
 import {RouterOutlet} from "@angular/router";
 import {CommonModule} from "@angular/common";
 
+
+import {DisplayLinkConnectionService} from "../../application/displayLinkConnection/display-link-connection.service";
+
 @Component({
   selector: 'app-nav',
   standalone: true,
@@ -20,23 +23,10 @@ export class NavComponent implements OnInit{
 
   constructor(
     private zone: NgZone,
+    public displayLinkConnection: DisplayLinkConnectionService,
   ) {}
 
-  ngOnInit(){
-    this.listenToUsb()
-  }
+  ngOnInit(){}
 
-  listenToUsb(){
-    window.electronAPI.receiveDataFromElectron('display-controller-connected', (device: any) => {
-      this.zone.run(() => {
-        this.displayController.linked = true;
-      })
-    })
-    window.electronAPI.receiveDataFromElectron('display-controller-disconnected', () => {
-      this.zone.run(() => {
-        this.displayController.linked = false;
-      })
-    })
-  }
 
 }
